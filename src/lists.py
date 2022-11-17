@@ -92,11 +92,11 @@ class DLList(Generic[T]):
 
 
 
-new_list = DLList([1, 2, 3, 4])
-print(new_list.head.next.val)
-new_list.head = new_list.head.next
-print(new_list.head.next.val)
-print(new_list)
+#new_list = DLList([1, 2, 3, 4])
+#print(new_list.head.next.val)
+#new_list.head = new_list.head.next
+#print(new_list.head.next.val)
+#print(new_list)
 
 
 
@@ -118,9 +118,9 @@ def keep(x: DLList[T], p: Callable[[T], bool]) -> None:
         link = link.next
     return link
 
-x = DLList([1, 2, 3, 4, 5])
-keep(x, lambda a: a % 2 == 0)
-print(x)
+#x = DLList([1, 2, 3, 4, 5])
+#keep(x, lambda a: a % 2 == 0)
+#print(x)
 
 
 def reverse(x: DLList[T]) -> None:
@@ -141,10 +141,10 @@ def reverse(x: DLList[T]) -> None:
         link = link.next
     return link
 
-x = DLList([1, 2, 3, 4, 5])
-print(x)
-reverse(x)
-print(x)
+#x = DLList([1, 2, 3, 4, 5])
+#print(x)
+#reverse(x)
+#print(x)
 
 
 
@@ -183,6 +183,6 @@ def sort(x: DLList[S]) -> None:
     return Link
     
 
-x = DLList([1, 3, 12, 6, 4, 5])
-sort(x)
-print(x)
+#x = DLList([1, 3, 12, 6, 4, 5])
+#sort(x)
+#print(x)
