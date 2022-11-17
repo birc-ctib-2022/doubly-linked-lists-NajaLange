@@ -172,14 +172,12 @@ def sort(x: DLList[S]) -> None:
             link = link.next
         elif link.val == end.val:
             end = link.next
-            print(end.val)
         else: 
             insert_after(end, link.val)
             remove_link(link)
             link = link.next
-            print(end.val)
     
 
-#x = DLList([1, 3, 12, 6, 4, 5])
-#sort(x)
-#print(x)
+x = DLList([1, 3, 12, 6, 4, 5])
+sort(x)
+print(x)
