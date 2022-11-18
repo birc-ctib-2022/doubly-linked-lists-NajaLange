@@ -139,10 +139,10 @@ def reverse(x: DLList[T]) -> None:
         remove_link(link)
         link = link.next
 
-#x = DLList([1, 2, 3, 4, 5])
-#print(x)
-#reverse(x)
-#print(x)
+x = DLList([1, 2, 3, 4, 5])
+print(x)
+reverse(x)
+print(x)
 
 
 
@@ -171,13 +171,14 @@ def sort(x: DLList[S]) -> None:
         if link.val < end.val: 
             link = link.next
         elif link.val == end.val:
-            end = link.next
+            end = x.head.prev
         else: 
             insert_after(end, link.val)
             remove_link(link)
             link = link.next
     
 
-x = DLList([1, 3, 12, 6, 4, 5])
+#x = DLList([1, 3, 12, 6, 4, 5])
+x = DLList([1, 3, 12, 13, 4, 5])
 sort(x)
 print(x)
