@@ -156,7 +156,7 @@ def is_it_sorted(x : DLList[S]) -> bool:
     return True
 
 
-def sort(x: DLList[S]) -> None:
+def sort(x: DLList[S]) -> DLList[S]:
     """
     Sort the list x.
 
@@ -167,6 +167,8 @@ def sort(x: DLList[S]) -> None:
     """
     link = x.head.next
     end = x.head.prev
+    if link == end: 
+        return x 
     while is_it_sorted(x)==False:
         if link.val < end.val: 
             link = link.next
